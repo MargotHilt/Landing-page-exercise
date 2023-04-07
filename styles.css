@@ -1,0 +1,286 @@
+:root{
+    --primary-color: hsl(0, 0%, 98%);
+    --secondary-color: black;
+    --accent-color: hsl(0, 0%, 41%);
+}
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Epilogue, Helvetica, sans-serif;
+    background-color: var(--primary-color);
+}
+
+a{
+    text-decoration: none;
+    color: var(--accent-color);
+    font-size: 18px;
+}
+
+a:hover, a:focus {
+    color: rgb(83, 89, 206);
+}
+
+ul{
+    list-style: none;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em 1em;
+}
+
+.header-icons{
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#menu {
+    width: 30px;
+}
+
+nav{
+    top: 0;
+    right: 0;
+    position:fixed;
+    background-color: var(--primary-color);
+    display:flex;
+    flex-direction: column;
+    width: 65%;
+    height: 100%;
+    z-index:3;
+}
+
+nav #cross{
+    padding: 1.5em 1em 1.5em 0;
+    margin-right: 0;
+    margin-left: auto;
+    width: 30px;
+}
+
+nav > ul{
+    margin-right: auto;
+    margin-left: 1em;
+    padding: 0;
+}
+
+.subnav li {
+    padding: 0.75em;
+}
+
+nav > ul > div, nav > ul > li{
+    padding: 14px;
+}
+
+.arrow-icon{
+    padding-left:0.75em;
+    height: fit-content;
+}
+
+.tab{
+    display: flex;
+    align-items: center;
+}
+
+ul > li > img{
+    padding-right:0.75em;
+}
+
+.login-register{
+    text-align: center;
+    padding-top: 2em;
+    margin: auto;
+}
+
+.login-register a{
+    display: block;
+}
+
+.login-register a:last-of-type{
+    border: 1px solid var(--secondary-color);
+    padding: 1em 3.2em;
+    margin-top:1em;
+    border-radius: 1em;
+}
+
+.hidden{
+    display: none;
+}
+
+.modal-open{
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .5);
+    opacity: 1;
+    display: flex;
+}
+
+.hero-img-mobile{
+    max-width: min(700px, 100%);
+    display: flex;
+    margin: auto;
+}
+
+.hero-img-desktop{
+    display: none;
+}
+
+.content{
+    text-align: center;
+    padding: max(1.5em, 9%);
+}
+
+.content h1 {
+    margin-bottom: 0;
+    font-size: 2.4rem;
+}
+
+.content button {
+    font-weight: 500;
+    font-size: 18px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 1em 2em;
+    border-radius: 1em;
+    margin-bottom: 2.5em;
+    margin-top: 1em;
+    border:none;
+}
+
+.content button:active, .content button:focus{
+    background-color: var(--primary-color);
+    color:var(--secondary-color);
+    border: 1px solid black;
+}
+
+.content p {
+    font-size: 18px;
+    color: var(--accent-color);
+    line-height: 1.25;
+}
+
+.brands{
+    display: flex;
+    justify-content: space-around;
+} 
+
+.brand-img {
+    height: 2vh;
+}
+
+@media(min-width: 850px){
+
+    header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 1em 2em;   
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+        width: 85vw;
+        height: 60px;
+    }
+
+    nav > ul{
+        margin: 0;
+        padding-left: 0.75em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .login-register a{
+        padding: 16px;
+    }
+
+    .subnav{
+        background-color: var(--primary-color);
+        position: absolute;
+        border-radius: 1em;
+        align-items: center;
+        padding: 1em;
+    }
+    
+    #subnav-features{
+        top: 70px;
+        left: -40px;
+    }
+    #subnav-company{
+        top: 70px;
+        left: 180px;
+    }
+
+    .login-register{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .login-register a:last-of-type{
+        padding: 0.75em 1em;
+        margin: 0;
+        border-radius: 1em;
+    }
+
+    #menu, #cross{
+        display: none;
+    } 
+
+    main{
+        display: flex;
+        flex-direction: row-reverse;
+        height: 500px;
+        padding-top:3em;
+    }
+
+    .hero-img-mobile{
+        display: none;
+    }
+    
+    .hero-img-desktop{
+        width: max(auto, 10vw);
+        display: block;
+        padding-right: max(10vw, 1em);
+       
+    }
+    
+    .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: left;
+        padding: 0 10%;
+        margin: 0;
+    }
+    
+    .content h1 {
+        font-size: 4.3rem;
+    }
+    
+    .content button{
+        cursor: pointer;
+        width: 200px;
+    }
+    
+    .brands{
+        margin-top:2em;
+    } 
+
+    .brand-img {
+        height: 60%;
+    }
+}

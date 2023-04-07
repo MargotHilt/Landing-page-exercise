@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-icons">
+            <img class="logo" src="./assets/logo.svg">
+            <img class="openable" id="menu" src="./assets/icon-menu.svg">
+        </div>
+        <div id="modal-container">
+            <nav id="nav" class="hidden">
+                <img class="openable" id="cross" src="./assets/icon-close-menu.svg">
+                <ul>
+                    <div id="features" class="openable tab">
+                        <li><a href="#">Features </a></li>
+                        <img class="arrow-icon" src="./assets/icon-arrow-down.svg">
+                    </div>
+                        <ul class="hidden subnav" id="subnav-features">
+                            <li><img class="submenu-icon" src="./assets/icon-todo.svg"><a href="#">Todo List</a></li>
+                            <li><img class="submenu-icon" src="./assets/icon-calendar.svg"><a href="#">Calendar</a></li>
+                            <li><img class="submenu-icon" src="./assets/icon-reminders.svg"><a href="#">Reminders</a></li>
+                            <li><img class="submenu-icon" src="./assets/icon-planning.svg"><a href="#">Planning</a></li>
+                        </ul>
+                    <div id="company" class="openable tab">
+                        <li><a href="#">Company</a></li>
+                        <img class="arrow-icon" src="./assets/icon-arrow-down.svg">
+                    </div>
+                        <ul class="hidden subnav" id="subnav-company" > 
+                            <li><a href="#">History</a></li>
+                            <li><a href="#">Our Team</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+                <div class="login-register">
+                    <a href="#">Login</a>
+                    <a href="#">Register</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <img class="hero-img-mobile" src="./assets/image-hero-mobile.png">
+        <img class="hero-img-desktop" src="./assets/image-hero-desktop.png">
+        <div class="content">
+            <h1>Make remote work</h1>
+            <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+            <button>Learn more</button>
+            <div class="brands">
+                <img class="brand-img" src="./assets/client-databiz.svg">
+                <img class="brand-img" src="./assets/client-audiophile.svg">
+                <img class="brand-img" src="./assets/client-meet.svg">
+                <img class="brand-img" src="./assets/client-maker.svg">
+            </div>
+        </div>
+    </main>
+</body>
+<script src="index.js"></script>
+</html>
