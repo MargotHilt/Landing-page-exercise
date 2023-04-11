@@ -34,7 +34,7 @@ function closeMenu(menu){
 window.addEventListener("resize", () => {
     hiddenMenu.forEach(menu => closeMenu(menu))
     if(modelContainerEl.classList.contains("modal-open")) {modelContainerEl.classList.toggle("modal-open")}
-    if(window.innerWidth < 850){document.getElementById("nav").classList.add("hidden")}
+    if(window.innerWidth < 800){document.getElementById("nav").classList.add("hidden")}
     else document.getElementById("nav").classList.remove("hidden")   
 })
 
@@ -42,15 +42,15 @@ window.addEventListener("resize", () => {
 
 hiddenMenu.forEach(menu => menu.addEventListener("click", (e) => openMenu(e)))
 hiddenMenu.forEach(menu => menu.addEventListener("mouseenter", (e) => 
-    {if(window.innerWidth > 850){openMenu(e)}}
+    {if(window.innerWidth > 800){openMenu(e)}}
 ))
 hiddenMenu.forEach(menu => menu.addEventListener("mouseleave", () => 
-    {if(window.innerWidth > 850){setTimeout(() => closeMenu(menu), 2000)}}
+    {if(window.innerWidth > 800){setTimeout(() => closeMenu(menu), 2000)}}
 ))
 
 //nav init state//
 
-if(window.innerWidth < 850){
+if(window.innerWidth < 800){
     document.getElementById("nav").classList.add("hidden")
 }
 else document.getElementById("nav").classList.remove("hidden")
